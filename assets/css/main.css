@@ -1,0 +1,186 @@
+nav {
+top:0;
+left:0;
+width:100%;
+color:#fff;
+height:80px;
+z-index:1000;
+margin-top:0;
+position:fixed;
+padding-top:0;
+background:none;
+transition:all .6s cubic-bezier(0.7,0.01,0.3,1);
+}
+
+.logo,.menu {
+position:absolute;
+z-index:2000;
+}
+
+.logo {
+left:0;
+top:-4px;
+width:70px;
+height:74px;
+text-align:left;
+background-position:50% 50%;
+background-repeat:no-repeat;
+background-image:url(https://dropboxforbusinessblog.files.wordpress.com/2012/12/huge1.png?w=650&h=250.png);
+padding:.4% 2%;
+}
+
+.menu {
+top:0;
+right:0;
+height:4px;
+width:24px;
+text-align:right;
+background:#ec008c;
+transition:all .3s;
+margin:2rem;
+}
+
+.menu:before,.menu:after {
+content:"";
+display:block;
+width:24px;
+height:4px;
+background:#ec008c;
+position:absolute;
+z-index:-1;
+}
+
+.menu:before {
+top:-8px;
+}
+
+.menu:after {
+top:8px;
+}
+
+#toggle {
+width:104px;
+height:74px;
+z-index:1000;
+background-position:50% 50%;
+background-repeat:no-repeat;
+cursor:pointer;
+position:absolute;
+top:0;
+right:0;
+padding:45px 40px;
+}
+
+#toggle:hover .menu:before {
+top:-9px;
+}
+
+#toggle:hover .menu:after {
+top:9px;
+}
+
+.open .menu {
+background:none!important;
+}
+
+.open .menu:after {
+top:0!important;
+background:#fff!important;
+transform:rotate(45deg);
+}
+
+.open .menu:before {
+top:0!important;
+background:#fff!important;
+transform:rotate(-45deg);
+}
+
+nav.nav-background {
+top:0;
+opacity:0;
+width:100%;
+height:100%;
+z-index:1500;
+display:table;
+background:none;
+position:absolute;
+transition:background-color .6s cubic-bezier(0.7,0.01,0.3,1);
+}
+
+nav.open .nav-background {
+opacity:1;
+background-color:rgba(217,40,130,0.9)!important;
+transition:background-color .6s cubic-bezier(0.7,0.01,0.3,1);
+}
+
+nav.open {
+height:100%;
+transition:none;
+-o-transition:none;
+-moz-transition:none;
+-webkit-transition:none;
+}
+
+nav ul {
+top:-10%;
+opacity:0;
+width:100%;
+text-align:center;
+vertical-align:middle;
+visibility:hidden;
+transform:perspective(600px) rotateX(10deg);
+transition:all .5s cubic-bezier(0.7,0,0.36,0.63);
+padding:70px 0 0;
+}
+
+nav ul li {
+visibility:hidden;
+}
+
+nav ul li a {
+color:#FFF;
+width:100%;
+display:block;
+letter-spacing:-.06em;
+text-decoration:none;
+padding:8px 0 0;
+}
+
+nav ul li a:hover {
+color:#ec008c;
+background-color:#FFF;
+}
+
+nav.open ul {
+top:0;
+opacity:1;
+margin-top:0;
+visibility:visible;
+transform:perspective(600px) rotateX(0deg);
+}
+
+nav.open ul li {
+color:#fff;
+font-size:60px;
+visibility:visible!important;
+}
+
+nav.header-in {
+background-color:rgba(217,40,130,0.9);
+}
+
+.solid #toggle .menu {
+background:#ec008c;
+}
+
+.overflow-hidden {
+overflow:hidden;
+}
+
+nav.open .logo,nav.solid #logo .logo {
+background-image:url(https://dropboxforbusinessblog.files.wordpress.com/2012/12/huge1.png?w=650&h=250.png);
+}
+
+.solid #toggle .menu:after,.solid #toggle .menu:before {
+background-color:#fff;
+}
